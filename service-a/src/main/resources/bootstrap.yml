@@ -1,0 +1,17 @@
+
+
+
+
+spring:
+  application:
+    name: service-a
+  cloud:
+    config:
+      uri: http://localhost:9090/
+      name: native
+      profile: common
+eureka:
+  instance:
+    appname: service-a
+    hostname: 127.0.0.1
+    lease-renewal-interval-in-seconds: 5

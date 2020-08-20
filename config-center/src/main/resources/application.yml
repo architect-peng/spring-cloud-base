@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: native
+
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+  application:
+    name: config-center
+server:
+  port: 9090
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka
+  instance:
+    appname: config-center
+    hostname: 127.0.0.1
+    lease-renewal-interval-in-seconds: 5

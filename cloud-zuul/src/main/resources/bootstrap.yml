@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: cloud-zuul
+  cloud:
+    config:
+      uri: http://localhost:9090/
+      name: native
+      profile: common
+eureka:
+  instance:
+    appname: cloud-zuul
+    hostname: 127.0.0.1
+    lease-renewal-interval-in-seconds: 5
+server:
+  port: 80
